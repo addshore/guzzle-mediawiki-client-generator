@@ -1,0 +1,20 @@
+{
+	"name": "addwiki/guzzle-mediawiki-generator",
+	"type": "library",
+	"description": "Used to generate a Guzzle service description for the Mediawiki Api",
+	"keywords": ["Guzzle"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Addshore"
+		}
+	],
+	"require": {
+		"addwiki/guzzle-mediawiki-client": "dev-master"
+	},
+	"autoload": {
+		"psr-0": {
+			"Guzzle\\Service\\Mediawiki": "src/"
+		}
+	}
+}
