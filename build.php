@@ -11,4 +11,5 @@ $descriptionGenerator = new \Guzzle\Service\Mediawiki\ServiceDescriptionGenerato
 
 $json = $descriptionGenerator->build( $actionListGenerator->generateList() );
 
+file_put_contents( __DIR__ . '/build_output.json', $json );
 echo $json;
