@@ -5,18 +5,10 @@ if( !file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 
 require_once( __DIR__ . '/vendor/autoload.php' );
 
-$generator = new \Guzzle\Service\Mediawiki\ServiceDescriptionGenerator(
-	\Guzzle\Service\Mediawiki\MediawikiApiClient::factory(
-		array(
-			'base_url' => 'http://localhost/wiki/api.php'
-		)
-	)
-);
+$client = 	\Guzzle\Service\Mediawiki\MediawikiApiClient::factory( array( 'base_url' => 'http://localhost/wiki/api.php' ) );
+$actionListGenerator = new \Guzzle\Service\Mediawiki\ActionListGenerator( $client );
+$descriptionGenerator = new \Guzzle\Service\Mediawiki\ServiceDescriptionGenerator( $client );
 
-$actions = array(
-	'edit',
-);
-
-$json = $generator->build( $actions );
+$json = $descriptionGenerator->build( $actionListGenerator->generateList() );
 
 echo $json;

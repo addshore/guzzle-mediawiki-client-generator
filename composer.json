@@ -1,5 +1,5 @@
 {
-	"name": "addwiki/guzzle-mediawiki-generator",
+	"name": "addwiki/guzzle-mediawiki-descriptionGenerator",
 	"type": "library",
 	"description": "Used to generate a Guzzle service description for the Mediawiki Api",
 	"keywords": ["Guzzle"],
