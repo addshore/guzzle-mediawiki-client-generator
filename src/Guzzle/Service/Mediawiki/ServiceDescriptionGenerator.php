@@ -31,12 +31,12 @@ class ServiceDescriptionGenerator {
 	 * @returns array Guzzle Service Description in array form
 	 */
 	private function generateDescription( $actions ) {
-		$description = array();
-		$description['_abstract_request'] = $this->getAbstractRequest();
+		$operations = array();
+		$operations['_abstract_request'] = $this->getAbstractRequest();
 		foreach( $actions as $action ) {
-			$description[ $action ] = $this->generateOperation( $action );
+			$operations[ $action ] = $this->generateOperation( $action );
 		}
-		return $description;
+		return array( 'operations' => $operations );
 	}
 
 	/**
