@@ -25,7 +25,7 @@ class ActionListGenerator {
 		$result = $request->send();
 		$body = $result->getBody( true );
 
-		preg_match_all( '/\*\saction\=(\S+?)\s\*/', $body, $matches );
+		preg_match_all( '/\*\saction\=(\S+?)\s/', $body, $matches );
 		$actions = $matches[1];
 
 		return array_unique( $actions );
