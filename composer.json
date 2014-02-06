@@ -13,8 +13,8 @@
 		"addwiki/guzzle-mediawiki-client": "dev-master"
 	},
 	"autoload": {
-		"psr-0": {
-			"Guzzle\\Service\\Mediawiki": "src/"
+		"psr-4": {
+			"Guzzle\\Service\\Mediawiki\\": "src/"
 		}
 	}
 }
