@@ -117,12 +117,11 @@ class ServiceDescriptionGenerator {
 			'type' => 'string',
 		);
 
-		// Params always go to the query field
-//		if( $mustBePosted ) {
-//			$parameters['action']['location'] = 'postField';
-//		} else {
+		if( $mustBePosted ) {
+			$parameters['action']['location'] = 'postField';
+		} else {
 			$parameters['action']['location'] = 'query';
-//		}
+		}
 
 		foreach( $parametersDetails as $parameterDetails ) {
 			$parameters[ $prefix . $parameterDetails['name'] ] = $this->generateParameter( $parameterDetails, $mustBePosted, $prefix );
@@ -143,12 +142,11 @@ class ServiceDescriptionGenerator {
 
 		$param['name'] = $prefix . $details['name'];
 
-		// Params always go to the query field
-//		if( $mustBePosted ) {
-//			$param['location'] = 'postField';
-//		} else {
+		if( $mustBePosted ) {
+			$param['location'] = 'postField';
+		} else {
 			$param['location'] = 'query';
-//		}
+		}
 
 		if( array_key_exists( 'type', $details ) ) {
 			// Don't limit what can be in arrays here, just make sure they are arrays
