@@ -1,5 +1,5 @@
 {
-	"name": "addwiki/guzzle-mediawiki-generator",
+	"name": "addshore/guzzle-mediawiki-client-generator",
 	"type": "library",
 	"description": "Used to generate a Guzzle service description for the Mediawiki Api",
 	"keywords": ["Guzzle"],
@@ -10,7 +10,7 @@
 		}
 	],
 	"require": {
-		"addwiki/guzzle-mediawiki-client": "dev-master"
+		"addshore/guzzle-mediawiki-client": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {
